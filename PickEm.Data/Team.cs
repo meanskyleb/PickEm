@@ -7,6 +7,41 @@ using System.Threading.Tasks;
 
 namespace PickEm.Data
 {
+    public enum NamesOfTeams
+    {
+        Bears = 1,
+        Bengals,
+        Bills,
+        Broncos,
+        Browns,
+        Buccaneers,
+        Cardinals,
+        Chargers,
+        Chiefs,
+        Colts,
+        Cowboys,
+        Dolphins,
+        Eagles,
+        Falcons,
+        FortyNiners,
+        Giants,
+        Jaguars,
+        Jets,
+        Lions,
+        Packers,
+        Panthers,
+        Patriots,
+        Raiders,
+        Rams,
+        Ravens,
+        Redskins,
+        Saints,
+        Seahawks,
+        Steelers,
+        Titans,
+        Texans,
+        Vikings,
+    }
     public enum Conference { American = 1, National }
     public class Team
     {
@@ -16,7 +51,7 @@ namespace PickEm.Data
         public Guid OwnerId { get; set; }
 
         [Required]
-        public string TeamName { get; set; }
+        public NamesOfTeams TeamName { get; set; }
 
         [Required]
         public string TeamCity { get; set; }

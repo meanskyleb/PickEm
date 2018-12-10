@@ -1,0 +1,58 @@
+﻿@model PickEm.Models.WeekModels.WeekDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WeekDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WeekId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeekId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeasonNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeasonNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeasonWeek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeasonWeek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StadiumName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StadiumName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WeekId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

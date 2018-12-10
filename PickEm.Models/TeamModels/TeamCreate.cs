@@ -11,9 +11,7 @@ namespace PickEm.Models.TeamModels
     public class TeamCreate
     {
         [Required]
-        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
-        [MaxLength(50, ErrorMessage = "There are too many characters in this field.")]
-        public string TeamName { get; set; }
+        public NamesOfTeams TeamName { get; set; }
 
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
@@ -21,10 +19,8 @@ namespace PickEm.Models.TeamModels
         public string TeamCity { get; set; }
 
         [Required]
-        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
-        [MaxLength(50, ErrorMessage = "There are too many characters in this field.")]
         public Conference TeamConference { get; set; }
 
-        public override string ToString() => TeamName;
+        public override string ToString() => TeamCity;
     }
 }

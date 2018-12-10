@@ -1,30 +1,19 @@
-﻿using System;
+﻿using PickEm.Data;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PickEm.Data
+namespace PickEm.Models.WeekModels
 {
-    public class Week
+    public class WeekEdit
     {
-        [Key]
         public int WeekId { get; set; }
-
-        public Guid OwnerId { get; set; }
-
-        [Required]
         public int SeasonNumber { get; set; }
-
-        [Required]
         public int SeasonWeek { get; set; }
-
-        [Required]
         public string StadiumName { get; set; }
-
         public int PlayerId { get; set; }
-
         public virtual Player Player { get; set; }
     }
 }

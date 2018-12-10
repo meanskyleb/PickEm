@@ -68,6 +68,18 @@
     <Compile Include="Migrations\201812061647126_add stuff.Designer.cs">
       <DependentUpon>201812061647126_add stuff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812061842004_Added Stuff.cs" />
+    <Compile Include="Migrations\201812061842004_Added Stuff.Designer.cs">
+      <DependentUpon>201812061842004_Added Stuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812062051366_AddedStuff1.cs" />
+    <Compile Include="Migrations\201812062051366_AddedStuff1.Designer.cs">
+      <DependentUpon>201812062051366_AddedStuff1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071704493_AddedMoreStuff.cs" />
+    <Compile Include="Migrations\201812071704493_AddedMoreStuff.Designer.cs">
+      <DependentUpon>201812071704493_AddedMoreStuff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Prediction.cs" />
     <Compile Include="Team.cs" />
@@ -88,6 +100,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812061647126_add stuff.resx">
       <DependentUpon>201812061647126_add stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061842004_Added Stuff.resx">
+      <DependentUpon>201812061842004_Added Stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812062051366_AddedStuff1.resx">
+      <DependentUpon>201812062051366_AddedStuff1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071704493_AddedMoreStuff.resx">
+      <DependentUpon>201812071704493_AddedMoreStuff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

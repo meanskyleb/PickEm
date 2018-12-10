@@ -12,7 +12,7 @@ namespace PickEm.WebMVC.Controllers
     [Authorize]
     public class PlayerController : Controller
     {
-        // GET: PickEm
+        // GET: Player
         public ActionResult Index()
         {
             var service = CreatePlayerService();
@@ -56,7 +56,7 @@ namespace PickEm.WebMVC.Controllers
             var svc = CreatePlayerService();
             var model = svc.GetPlayerById(id);
             
-        return View(model);
+            return View(model);
         }
 
 

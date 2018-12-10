@@ -13,8 +13,7 @@ namespace PickEm.Models.WeekModels
         public int SeasonNumber { get; set; }
         public int SeasonWeek { get; set; }
         public string StadiumName { get; set; }
-        public virtual Player User { get; set; }
-
-        //public override int ToInt() => SeasonWeek;
+        public int PlayerId { get; set; }
+        public virtual Player Player { get; set; }
     }
 }

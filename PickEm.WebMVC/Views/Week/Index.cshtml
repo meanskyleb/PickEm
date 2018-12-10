@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PickEm.Models.WeekModels.WeekListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WeekId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeasonNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeasonWeek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StadiumName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeekId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeasonNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeasonWeek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StadiumName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayerId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.WeekId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.WeekId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.WeekId })
+        </td>
+    </tr>
+}
+
+</table>

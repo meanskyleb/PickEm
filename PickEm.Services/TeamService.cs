@@ -75,5 +75,37 @@ namespace PickEm.Services
                     };
             }
         }
+
+        public bool UpdateTeam(TeamEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Teams
+                        .Single(e => e.TeamId == model.TeamId && e.OwnerId == _userId);
+
+                entity.TeamName = model.TeamName;
+                entity.TeamCity = model.TeamCity;
+                entity.TeamConference = model.TeamConference;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteTeam(int teamid)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Teams
+                        .Single(e => e.TeamId == teamid && e.OwnerId == _userId);
+
+                ctx.Teams.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

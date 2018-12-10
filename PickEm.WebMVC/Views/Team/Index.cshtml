@@ -20,7 +20,9 @@
         <th>
             @Html.DisplayNameFor(model => model.TeamCity)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamConference)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -35,9 +37,12 @@
             @Html.DisplayFor(modelItem => item.TeamCity)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.DisplayFor(modelItem => item.TeamConference)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.TeamId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TeamId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TeamId })
         </td>
     </tr>
 }
