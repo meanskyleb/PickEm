@@ -18,6 +18,15 @@ namespace PickEm.Data
         public int WeekId { get; set; }
 
         [Required]
+        public int HomeTeamId { get; set; }
+
+        [Required]
+        public int AwayTeamId { get; set; }
+
+        [Required]
+        public int PlayerId { get; set; }
+
+        [Required]
         public string HomeTeam { get; set; }
 
         [Required]
@@ -26,6 +35,16 @@ namespace PickEm.Data
         [Required]
         public bool HomeTeamWin { get; set; }
 
-        public virtual Week Week { get; set; }
+
+        public virtual Team Team { get; set; }
+        public virtual Player Player { get; set; }
+        
+        //public virtual Week Week { get; set; }
+        // TODO 1
+        // Add FK IDs of HomeTeamId & AwayTeamId
+        // Add virtual property for Team
+        // Add FK ID for Player
+        // Add virtual property for Player
+        // Do a migration
     }
 }

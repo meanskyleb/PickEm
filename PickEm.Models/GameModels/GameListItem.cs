@@ -10,10 +10,18 @@ namespace PickEm.Models.GameModels
     public class GameListItem
     {
         public int GameId { get; set; }
-        public int WeekId { get; set; }
         public string HomeTeam { get; set; }
         public string AwayTeam { get; set; }
+        public int HomeTeamId { get; set; }
+        public int AwayTeamId { get; set; }
+        public int PlayerId { get; set; }
         public bool HomeTeamWin { get; set; }
-        public virtual Week Week { get; set; }
+        
+        public virtual Player Player { get; set; }
+        public virtual Team Team { get; set; }
+
+        //public int WeekId { get; set; }
+        //public virtual Week Week { get; set; }
+
     }
 }

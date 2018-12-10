@@ -15,13 +15,19 @@
             @Html.DisplayNameFor(model => model.GameId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.WeekId)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.HomeTeam)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AwayTeam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeTeamId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AwayTeamId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerId)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.HomeTeamWin)
@@ -35,21 +41,27 @@
             @Html.DisplayFor(modelItem => item.GameId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.WeekId)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.HomeTeam)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AwayTeam)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.HomeTeamId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AwayTeamId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayerId)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.HomeTeamWin)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.GameId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.GameId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.GameId })
         </td>
     </tr>
 }

@@ -31,7 +31,6 @@ namespace PickEm.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-
             var service = CreateTeamService();
 
             if (service.CreateTeam(model))

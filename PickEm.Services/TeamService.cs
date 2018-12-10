@@ -28,6 +28,8 @@ namespace PickEm.Services
                     TeamCity = model.TeamCity,
                     TeamConference = model.TeamConference
                 };
+
+
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Teams.Add(entity);
@@ -107,5 +109,8 @@ namespace PickEm.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+
+
     }
 }

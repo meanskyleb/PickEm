@@ -24,6 +24,15 @@ namespace PickEm.Services
                 new Game()
                 {
                     OwnerId = _userId,
+                    HomeTeam = model.HomeTeam,
+                    HomeTeamId = model.HomeTeamId,
+                    AwayTeam = model.AwayTeam,
+                    AwayTeamId = model.AwayTeamId,
+                    PlayerId = model.PlayerId
+
+                    //TODO 3 - Pass the models properties(RHS) to the Game Object
+                    //  For example:
+                    // GameId = model.GameId
                     
                 };
 
@@ -46,9 +55,19 @@ namespace PickEm.Services
                             e =>
                                 new GameListItem
                                 {
-                                    
-                                }
-                                );
+                                    GameId = e.GameId,
+                                    HomeTeam = e.HomeTeam,
+                                    AwayTeam = e.AwayTeam,
+                                    HomeTeamId = e.HomeTeamId,
+                                    AwayTeamId = e.AwayTeamId,
+                                    PlayerId = e.PlayerId,
+                                 
+                                    /*
+                                  * //TODO 4
+                                    HomeTeamId = e.Team.TeamId 
+                                     
+                                 */   
+                                });
                 return query.ToArray();
             }
         }
@@ -64,16 +83,35 @@ namespace PickEm.Services
                 return
                     new GameDetail
                     {
-                        WeekId = entity.WeekId,
+                        GameId = entity.GameId,
                         HomeTeam = entity.HomeTeam,
+                        HomeTeamId = entity.HomeTeamId,
                         AwayTeam = entity.AwayTeam,
+                        AwayTeamId = entity.AwayTeamId,
                         HomeTeamWin = entity.HomeTeamWin,
                     };
             }
 
         }
 
-        
+        public bool UpdateGame(GameEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Games
+                        .Single(e => e.GameId == model.GameId && e.OwnerId == _userId);
+
+                entity.HomeTeam = model.HomeTeam;
+                entity.AwayTeam = model.AwayTeam;
+                entity.HomeTeamId = model.HomeTeamId;
+                entity.AwayTeamId = model.AwayTeamId;
+                entity.PlayerId = model.PlayerId;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
         public bool DeleteGame(int gameid)
         {

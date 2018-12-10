@@ -20,8 +20,31 @@ namespace PickEm.Models.GameModels
         [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
         public string AwayTeam { get; set; }
 
+        [Required]
+        public int HomeTeamId { get; set; }
 
-        public int WeekId { get; set; }
-        public virtual Week Week { get; set; }
+        [Required]
+        public int AwayTeamId { get; set; }
+
+        [Required]
+        public int PlayerId { get; set; }
+
+        [Required]
+        public bool HomeTeamWin { get; set; }
+
+
+        public virtual Team Team { get; set; }
+        public virtual Player Player { get; set; }
+
+        //[Required]
+        //public int WeekId { get; set; }
+        //public virtual Week Week { get; set; }
+
+
+        // TODO #2
+        // Need int properties for Home & Away teams
+        // Need int properties for Player
+
+       
     }
 }
