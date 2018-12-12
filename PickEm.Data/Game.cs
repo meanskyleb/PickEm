@@ -27,10 +27,10 @@ namespace PickEm.Data
         public int PlayerId { get; set; }
 
         [Required]
-        public string HomeTeam { get; set; }
+        public NamesOfTeams HomeTeam { get; set; }
 
         [Required]
-        public string AwayTeam { get; set; }
+        public NamesOfTeams AwayTeam { get; set; }
 
         [Required]
         public bool HomeTeamWin { get; set; }

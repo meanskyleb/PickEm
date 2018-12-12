@@ -21,6 +21,21 @@ namespace PickEm.WebMVC.Controllers
 
         public ActionResult Create()
         {
+            var service = CreateGameService();
+            var pService = GetPlayerService();
+            var tService = GetTeamService();
+
+            var unsortedPlayerList = new SelectList(pService.GetPlayers(), "PlayerId", "LastName");
+            var playerList = unsortedPlayerList.OrderBy(o => o.Text);
+
+            var unsortedTeamList = new SelectList(tService.GetTeams(), "TeamId", "TeamName");
+            var teamList = unsortedTeamList.OrderBy(o => o.Text);
+
+            ViewBag.PlayerId = playerList;
+            ViewBag.HomeTeamId = teamList;
+            ViewBag.AwayTeamId = teamList;
+
+
             return View();
         }
 
@@ -35,19 +50,15 @@ namespace PickEm.WebMVC.Controllers
 
             if (service.CreateGame(model))
             {
-                TempData["SaveResult"] = "Your game was updated.";
+                TempData["SaveResult"] = "Your game was created.";
 
                 return RedirectToAction("Index");
             }
             return View(model);
         }
 
-        private GameService CreateGameService()
-        {
-            var gameId = Guid.Parse(User.Identity.GetUserId());
-            var service = new GameService(gameId);
-            return service;
-        }
+        
+
 
         public ActionResult Details(int id)
         {
@@ -61,6 +72,20 @@ namespace PickEm.WebMVC.Controllers
         public ActionResult Edit(int id)
         {
             var service = CreateGameService();
+            var pService = GetPlayerService();
+            var tService = GetTeamService();
+
+            var unsortedPlayerList = new SelectList(pService.GetPlayers(), "PlayerId", "LastName");
+            var playerList = unsortedPlayerList.OrderBy(o => o.Text);
+
+            var unsortedTeamList = new SelectList(tService.GetTeams(), "TeamId", "TeamName");
+            var teamList = unsortedTeamList.OrderBy(o => o.Text);
+
+            ViewBag.PlayerId = playerList;
+            ViewBag.HomeTeamId = teamList;
+            ViewBag.AwayTeamId = teamList;
+
+            
             var detail = service.GetGameById(id);
             var model =
                 new GameEdit
@@ -121,6 +146,27 @@ namespace PickEm.WebMVC.Controllers
             return RedirectToAction("Index");
         }
 
+
+        private GameService CreateGameService()
+        {
+            var gameId = Guid.Parse(User.Identity.GetUserId());
+            var service = new GameService(gameId);
+            return service;
+        }
+
+        private PlayerService GetPlayerService()
+        {
+            var playerId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PlayerService(playerId);
+            return service;
+        }
+
+        private TeamService GetTeamService()
+        {
+            var teamId = Guid.Parse(User.Identity.GetUserId());
+            var service = new TeamService(teamId);
+            return service;
+        }
 
     }       
 }

@@ -56,37 +56,9 @@
   <ItemGroup>
     <Compile Include="Game.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201811292045039_InitialCreate.cs" />
-    <Compile Include="Migrations\201811292045039_InitialCreate.Designer.cs">
-      <DependentUpon>201811292045039_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812041920579_changedName.cs" />
-    <Compile Include="Migrations\201812041920579_changedName.Designer.cs">
-      <DependentUpon>201812041920579_changedName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812061647126_add stuff.cs" />
-    <Compile Include="Migrations\201812061647126_add stuff.Designer.cs">
-      <DependentUpon>201812061647126_add stuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812061842004_Added Stuff.cs" />
-    <Compile Include="Migrations\201812061842004_Added Stuff.Designer.cs">
-      <DependentUpon>201812061842004_Added Stuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812062051366_AddedStuff1.cs" />
-    <Compile Include="Migrations\201812062051366_AddedStuff1.Designer.cs">
-      <DependentUpon>201812062051366_AddedStuff1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812071704493_AddedMoreStuff.cs" />
-    <Compile Include="Migrations\201812071704493_AddedMoreStuff.Designer.cs">
-      <DependentUpon>201812071704493_AddedMoreStuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812101646034_Added Even More Stuff.cs" />
-    <Compile Include="Migrations\201812101646034_Added Even More Stuff.Designer.cs">
-      <DependentUpon>201812101646034_Added Even More Stuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812101942191_Added More.cs" />
-    <Compile Include="Migrations\201812101942191_Added More.Designer.cs">
-      <DependentUpon>201812101942191_Added More.cs</DependentUpon>
+    <Compile Include="Migrations\201812112028327_initial.cs" />
+    <Compile Include="Migrations\201812112028327_initial.Designer.cs">
+      <DependentUpon>201812112028327_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Prediction.cs" />
@@ -100,29 +72,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811292045039_InitialCreate.resx">
-      <DependentUpon>201811292045039_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812041920579_changedName.resx">
-      <DependentUpon>201812041920579_changedName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812061647126_add stuff.resx">
-      <DependentUpon>201812061647126_add stuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812061842004_Added Stuff.resx">
-      <DependentUpon>201812061842004_Added Stuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812062051366_AddedStuff1.resx">
-      <DependentUpon>201812062051366_AddedStuff1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812071704493_AddedMoreStuff.resx">
-      <DependentUpon>201812071704493_AddedMoreStuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812101646034_Added Even More Stuff.resx">
-      <DependentUpon>201812101646034_Added Even More Stuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812101942191_Added More.resx">
-      <DependentUpon>201812101942191_Added More.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812112028327_initial.resx">
+      <DependentUpon>201812112028327_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

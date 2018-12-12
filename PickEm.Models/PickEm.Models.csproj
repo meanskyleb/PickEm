@@ -63,9 +63,7 @@
     <Compile Include="PlayerModels\PlayerCreate.cs" />
     <Compile Include="PlayerModels\PlayerDetail.cs" />
     <Compile Include="PlayerModels\PlayerListItem.cs" />
-    <Compile Include="TeamModels\TeamCreate.cs" />
     <Compile Include="TeamModels\TeamDetail.cs" />
-    <Compile Include="TeamModels\TeamEdit.cs" />
     <Compile Include="TeamModels\TeamListItem.cs" />
     <Compile Include="WeekModels\WeekCreate.cs" />
     <Compile Include="WeekModels\WeekDetail.cs" />

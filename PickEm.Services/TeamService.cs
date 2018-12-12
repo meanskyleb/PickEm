@@ -18,40 +18,23 @@ namespace PickEm.Services
             _userId = userId;
         }
 
-        public bool CreateTeam(TeamCreate model)
-        {
-            var entity =
-                new Team()
-                {
-                    OwnerId = _userId,
-                    TeamName = model.TeamName,
-                    TeamCity = model.TeamCity,
-                    TeamConference = model.TeamConference
-                };
-
-
-            using (var ctx = new ApplicationDbContext())
-            {
-                ctx.Teams.Add(entity);
-                return ctx.SaveChanges() == 1;
-            }
-        }
-
         public IEnumerable<TeamListItem> GetTeams()
         {
+            var parsedGuid = Guid.Parse("00000000-0000-0000-0000-000000000000");
+
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .Teams
-                        .Where(e => e.OwnerId == _userId)
+                        .Where(e => e.OwnerId == _userId || e.OwnerId == parsedGuid)
                         .Select(
                             e =>
                                 new TeamListItem
                                 {
                                     TeamId = e.TeamId,
                                     TeamName = e.TeamName,
-                                    TeamCity = e.TeamCity,
+                                    TeamLocation = e.TeamLocation,
                                     TeamConference = e.TeamConference,
                                 }
                                 );
@@ -72,26 +55,9 @@ namespace PickEm.Services
                     {
                         TeamId = entity.TeamId,
                         TeamName = entity.TeamName,
-                        TeamCity = entity.TeamCity,
+                        TeamLocation = entity.TeamLocation,
                         TeamConference = entity.TeamConference
                     };
-            }
-        }
-
-        public bool UpdateTeam(TeamEdit model)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                        .Teams
-                        .Single(e => e.TeamId == model.TeamId && e.OwnerId == _userId);
-
-                entity.TeamName = model.TeamName;
-                entity.TeamCity = model.TeamCity;
-                entity.TeamConference = model.TeamConference;
-
-                return ctx.SaveChanges() == 1;
             }
         }
 

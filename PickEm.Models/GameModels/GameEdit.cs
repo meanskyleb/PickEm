@@ -1,6 +1,7 @@
 ﻿using PickEm.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +12,22 @@ namespace PickEm.Models.GameModels
     {
         public readonly int GameId;
 
-        public string HomeTeam { get; set; }
-        public string AwayTeam { get; set; }
+        [Display(Name = "Home Team")]
+        public NamesOfTeams HomeTeam { get; set; }
+
+        [Display(Name = "Away Team")]
+        public NamesOfTeams AwayTeam { get; set; }
+
+        [Display(Name = "Home Team Id")]
         public int HomeTeamId { get; set; }
+
+        [Display(Name = "Away Team Id")]
         public int AwayTeamId { get; set; }
+
+        [Display(Name = "Player")]
         public int PlayerId { get; set; }
+
+        [Display(Name = "Home Team Win")]
         public bool HomeTeamWin { get; set; }
 
         public virtual Player Player { get; set; }

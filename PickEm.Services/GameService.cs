@@ -25,10 +25,11 @@ namespace PickEm.Services
                 {
                     OwnerId = _userId,
                     HomeTeam = model.HomeTeam,
-                    HomeTeamId = model.HomeTeamId,
                     AwayTeam = model.AwayTeam,
+                    HomeTeamId = model.HomeTeamId,
                     AwayTeamId = model.AwayTeamId,
-                    PlayerId = model.PlayerId
+                    PlayerId = model.PlayerId,
+                    HomeTeamWin = model.HomeTeamWin,
 
                     //TODO 3 - Pass the models properties(RHS) to the Game Object
                     //  For example:
@@ -56,10 +57,11 @@ namespace PickEm.Services
                                 new GameListItem
                                 {
                                     GameId = e.GameId,
-                                    HomeTeam = e.HomeTeam,
-                                    AwayTeam = e.AwayTeam,
+                                    HomeTeam = (NamesOfTeams)e.HomeTeamId,
+                                    AwayTeam = (NamesOfTeams)e.AwayTeamId,
                                     HomeTeamId = e.HomeTeamId,
                                     AwayTeamId = e.AwayTeamId,
+                                    HomeTeamWin = e.HomeTeamWin,
                                     PlayerId = e.PlayerId,
                                  
                                     /*
@@ -108,6 +110,7 @@ namespace PickEm.Services
                 entity.HomeTeamId = model.HomeTeamId;
                 entity.AwayTeamId = model.AwayTeamId;
                 entity.PlayerId = model.PlayerId;
+                entity.HomeTeamWin = model.HomeTeamWin;
 
                 return ctx.SaveChanges() == 1;
             }

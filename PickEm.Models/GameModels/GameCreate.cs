@@ -11,25 +11,27 @@ namespace PickEm.Models.GameModels
     public class GameCreate
     {
         [Required]
-        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
-        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
-        public string HomeTeam { get; set; }
+        [Display(Name = "Home Team")]
+        public NamesOfTeams HomeTeam { get; set; }
 
         [Required]
-        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
-        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
-        public string AwayTeam { get; set; }
+        [Display(Name = "Away Team")]
+        public NamesOfTeams AwayTeam { get; set; }
 
         [Required]
-        public int HomeTeamId { get; set; }
-
-        [Required]
+        [Display(Name = "Away Team Id")]
         public int AwayTeamId { get; set; }
 
         [Required]
+        [Display(Name = "Home Team Id")]
+        public int HomeTeamId { get; set; }
+
+        [Required]
+        [Display(Name = "Player")]
         public int PlayerId { get; set; }
 
         [Required]
+        [Display(Name = "Home Team Win")]
         public bool HomeTeamWin { get; set; }
 
 

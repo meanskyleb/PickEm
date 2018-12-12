@@ -38,8 +38,8 @@ namespace PickEm.Data
         Saints,
         Seahawks,
         Steelers,
-        Titans,
         Texans,
+        Titans,
         Vikings,
     }
     public enum Conference { American = 1, National }
@@ -54,7 +54,7 @@ namespace PickEm.Data
         public NamesOfTeams TeamName { get; set; }
 
         [Required]
-        public string TeamCity { get; set; }
+        public string TeamLocation { get; set; }
 
         [Required]
         public Conference TeamConference { get; set; }
