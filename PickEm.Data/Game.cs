@@ -14,7 +14,7 @@ namespace PickEm.Data
 
         public Guid OwnerId { get; set; }
 
-        [Required]
+        
         public int WeekId { get; set; }
 
         [Required]

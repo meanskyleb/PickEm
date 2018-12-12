@@ -28,6 +28,9 @@ namespace PickEm.Models.GameModels
         [Display(Name = "Player")]
         public int PlayerId { get; set; }
 
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
         [Display(Name = "Home Team Win")]
         public bool HomeTeamWin { get; set; }
 

@@ -25,8 +25,11 @@ namespace PickEm.Models.GameModels
         [Display(Name = "Away Team Id")]
         public int AwayTeamId { get; set; }
 
-        [Display(Name = "Player")]
+        [Display(Name = "Player Id")]
         public int PlayerId { get; set; }
+
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
 
         [Display(Name = "Home Team Win")]
         public bool HomeTeamWin { get; set; }

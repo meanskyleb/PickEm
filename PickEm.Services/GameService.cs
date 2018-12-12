@@ -63,6 +63,8 @@ namespace PickEm.Services
                                     AwayTeamId = e.AwayTeamId,
                                     HomeTeamWin = e.HomeTeamWin,
                                     PlayerId = e.PlayerId,
+                                    LastName = e.Player.LastName,
+
                                  
                                     /*
                                   * //TODO 4
@@ -86,11 +88,13 @@ namespace PickEm.Services
                     new GameDetail
                     {
                         GameId = entity.GameId,
-                        HomeTeam = entity.HomeTeam,
+                        HomeTeam = (NamesOfTeams)entity.HomeTeamId,
                         HomeTeamId = entity.HomeTeamId,
-                        AwayTeam = entity.AwayTeam,
+                        AwayTeam = (NamesOfTeams)entity.AwayTeamId,
                         AwayTeamId = entity.AwayTeamId,
                         HomeTeamWin = entity.HomeTeamWin,
+                        PlayerId = entity.PlayerId,
+                        LastName = entity.Player.LastName,
                     };
             }
 
@@ -105,11 +109,12 @@ namespace PickEm.Services
                         .Games
                         .Single(e => e.GameId == model.GameId && e.OwnerId == _userId);
 
-                entity.HomeTeam = model.HomeTeam;
-                entity.AwayTeam = model.AwayTeam;
+                entity.HomeTeam = (NamesOfTeams)model.HomeTeamId;
+                entity.AwayTeam = (NamesOfTeams)model.AwayTeamId;
                 entity.HomeTeamId = model.HomeTeamId;
                 entity.AwayTeamId = model.AwayTeamId;
                 entity.PlayerId = model.PlayerId;
+                //entity.LastName = model.Player.LastName;
                 entity.HomeTeamWin = model.HomeTeamWin;
 
                 return ctx.SaveChanges() == 1;

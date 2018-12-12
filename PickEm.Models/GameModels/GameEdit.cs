@@ -10,13 +10,14 @@ namespace PickEm.Models.GameModels
 {
     public class GameEdit
     {
-        public readonly int GameId;
+        //public readonly int GameId;
 
-        [Display(Name = "Home Team")]
-        public NamesOfTeams HomeTeam { get; set; }
+        //[Display(Name = "Home Team")]
+        //public NamesOfTeams HomeTeam { get; set; }
 
-        [Display(Name = "Away Team")]
-        public NamesOfTeams AwayTeam { get; set; }
+        //[Display(Name = "Away Team")]
+        //public NamesOfTeams AwayTeam { get; set; }
+        public int GameId { get; set; }
 
         [Display(Name = "Home Team Id")]
         public int HomeTeamId { get; set; }
@@ -24,7 +25,7 @@ namespace PickEm.Models.GameModels
         [Display(Name = "Away Team Id")]
         public int AwayTeamId { get; set; }
 
-        [Display(Name = "Player")]
+        [Display(Name = "Player Id")]
         public int PlayerId { get; set; }
 
         [Display(Name = "Home Team Win")]

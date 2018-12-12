@@ -90,11 +90,12 @@ namespace PickEm.WebMVC.Controllers
             var model =
                 new GameEdit
                 {
-                    HomeTeam = detail.HomeTeam,
-                    AwayTeam = detail.AwayTeam,
+                    //HomeTeam = detail.HomeTeam,
+                    //AwayTeam = detail.AwayTeam,
+                    GameId = detail.GameId,
                     HomeTeamId = detail.HomeTeamId,
                     AwayTeamId = detail.AwayTeamId,
-                    Player = detail.Player,
+                    PlayerId = detail.PlayerId,
                 };
             return View(model);
         }
