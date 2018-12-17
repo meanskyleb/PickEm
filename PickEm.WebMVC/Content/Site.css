@@ -22,3 +22,135 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.display-1 {
+    font-family: 'Bungee', cursive;
+    color: azure;
+    text-align: center;
+}
+
+.lead {
+    font-family: 'Bungee', cursive;
+    color: azure;
+    text-align: center;
+}
+
+.contactpage {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.address {
+    font-family: 'Bungee', cursive;
+    color: azure;
+    text-align: center;
+}
+
+.emails {
+    font-family: 'Bungee', cursive;
+    color: azure;
+    text-align: center;
+}
+
+.footer {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+}
+
+.navbar {
+    font-family: 'Bungee', cursive;
+    color: azure;
+}
+
+.account {
+    font-family: 'Bungee', cursive;
+    color: azure;
+    text-align: center;
+}
+
+.manage {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.dl-horizontal {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+}
+
+.about {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.description {
+    font-family: 'Bungee', cursive;
+    color: azure;
+    text-align: center;
+}
+
+.actualscript {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+}
+
+.players {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.nflteams {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.games {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.form-horizontal {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+}
+
+.pd {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pe {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.dp {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+

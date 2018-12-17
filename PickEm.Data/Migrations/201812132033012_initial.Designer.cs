@@ -13,7 +13,7 @@ namespace PickEm.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201812112028327_initial"; }
+            get { return "201812132033012_initial"; }
         }
         
         string IMigrationMetadata.Source

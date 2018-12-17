@@ -4,9 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>NFL Teams</h2>
-
-
+<h2 class="nflteams">NFL Teams</h2>
+@section Styles
+{
+<style type="text/css">
+    table {
+        border: 5px solid #05045e;
+    }
+</style>
+}
+    <style>
+        body {
+            background-color: #808080
+        }
+    </style>
 <table class="table">
     <tr>
         <th>
@@ -21,26 +32,28 @@
         <th>
             @Html.DisplayNameFor(model => model.TeamConference)
         </th>
+        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TeamId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TeamName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TeamLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TeamConference)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id = item.TeamId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamConference)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.TeamId }, htmlAttributes: new { @class = "btn btn-dark" })
+            </td>
+        </tr>
+    }
 
 </table>

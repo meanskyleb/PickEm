@@ -4,11 +4,21 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Games</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h2 class="games">Games</h2>
+@section Styles
+{
+<style type="text/css">
+    table {
+        border: 5px solid #05045e;
+    }
+</style>
+}
+    <style>
+        body {
+            background-color: #808080;
+        }
+    </style>
+    <p><a class="btn btn-light" value="Add Game" onclick=location.href =@Html.ActionLink("Create New", "Create","Game")</a></p>
 <table class="table">
     <tr>
         <th>
@@ -29,29 +39,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.GameId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HomeTeam)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AwayTeam)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HomeTeamWin)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GameId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.GameId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.GameId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeTeam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AwayTeam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeTeamWin)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GameId }, htmlAttributes: new { @class = "btn btn-dark" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.GameId }, htmlAttributes: new { @class = "btn btn-dark" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GameId }, htmlAttributes: new { @class = "btn btn-dark" })
+            </td>
+        </tr>
+    }
 
 </table>
