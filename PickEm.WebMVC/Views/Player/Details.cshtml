@@ -64,7 +64,11 @@
 
     </dl>
 </div>
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PlayerId }) |
-    @Html.ActionLink("Back to List", "Index")
+    <a class="btn btn-light" value="Back To List" onclick=location.href @Html.ActionLink("Edit", "Edit", new { id = Model.PlayerId })
+</p>
+<p> 
+   <a class="btn btn-light" value="Back To List" onclick=location.href =@Html.ActionLink("Back to List", "Index")
+
 </p>

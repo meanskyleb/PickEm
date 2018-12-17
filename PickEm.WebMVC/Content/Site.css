@@ -128,7 +128,6 @@ textarea {
 .form-horizontal {
     font-family: 'Bungee', cursive;
     color: black;
-    text-align: center;
 }
 
 .pd {
@@ -152,5 +151,102 @@ textarea {
     padding-top: 20px;
 }
 
+.nav-item {
+    margin-left: 0.4em;
+}
 
+.navbar-toggle {
+    background: transparent;
+    border: none;
+}
+
+.pc {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.table {
+    font-family: 'Bungee', cursive;
+    color: black;
+}
+
+.td {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.gc {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ge {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.gd {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.dg {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.areyousure {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.purpose {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+}
+
+.future {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+}
+
+.direction {
+    font-family: 'Bungee', cursive;
+    color: black;
+    text-align: center;
+}
+
+.login {
+    font-family: 'Bungee', cursive;
+    color: black;
+    padding-top: 20px;
+}
+
+.register {
+    font-family: 'Bungee', cursive;
+    color: black;
+    padding-top: 20px;
+}
+
+#socialLoginForm {
+    font-family: 'Bungee', cursive;
+    color: black;
+    padding-top: 20px;
+}
 

@@ -68,9 +68,11 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-danger" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+        <p class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </p>
+            <p>
+                <a class="btn btn-light" value="Back To List" onclick=location.href =@Html.ActionLink("Back to List", "Index")
+            </p>
     }
-</div>
+
